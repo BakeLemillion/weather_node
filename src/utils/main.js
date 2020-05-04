@@ -9,7 +9,9 @@ const forcast = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback('Pizda s adresom', undefined)
         } else {
+             
             callback(undefined, {
+                body: body,
                 timezone: body.timezone,
                 summary: body.daily.data[0].summary,
                 temperature: body.currently.temperature,
