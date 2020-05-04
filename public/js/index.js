@@ -19,7 +19,7 @@ weatherForm.addEventListener('submit', (e)=>{
                 console.log(data.error)
             } else {
                 messageOne.textContent = `${data.location}`
-                messageTwo.textContent = `${data.forecast.timezone}, ${data.forecast.summary}, Температура сейчас - ${Math.round((data.forecast.temperature - 32)/1.8)}℃`
+                messageTwo.textContent = `${data.forecast.timezone}, ${data.forecast.summary}, Температура сейчас: ${Math.round((data.forecast.temperature - 32)/1.8)}℃`
                 console.log(data.forecast, data.location, data.body)
             }
         })
